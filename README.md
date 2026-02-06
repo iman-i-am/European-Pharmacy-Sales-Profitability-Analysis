@@ -23,12 +23,12 @@ This project explores European pharmacy sales data using **SQL for data preparat
 
 **Data**
 
-### **DimDate**
+#### **DimDate**
 - `DateKey` – Unique key for each day  
 - `Date` – Calendar date  
 - `Year`, `Quarter`, `MonthNumber`, `MonthName`, `YearMonth` – Time attributes  
 
-### **DimPharmacy**
+#### **DimPharmacy**
 - `PharmacyID`, `PharmacyName` – Store identifiers  
 - `Country`, `Region`, `City` – Geographic attributes  
 - `PharmacyType` – Urban/Suburban/Rural classification  
@@ -36,7 +36,7 @@ This project explores European pharmacy sales data using **SQL for data preparat
 - `StoreSizeBand` – Size category (S/M/L)  
 - `Latitude`, `Longitude` – Map coordinates  
 
-### **DimProduct**
+#### **DimProduct**
 - `ProductID`, `ProductName` – Product identifiers  
 - `Category` – Prescription/OTC grouping  
 - `Brand` – Brand family  
@@ -46,7 +46,7 @@ This project explores European pharmacy sales data using **SQL for data preparat
 - `LaunchDate` – Product availability date  
 - `IsDiscontinued`, `DiscontinuedDate` – Discontinuation details  
 
-### **FactSales**
+#### **FactSales**
 - `SalesID` – Unique sales record ID  
 - `DateKey` – Link to DimDate  
 - `PharmacyID` – Link to DimPharmacy  
@@ -61,7 +61,7 @@ This project explores European pharmacy sales data using **SQL for data preparat
 
 **Schema**
 
-## 🔹 Disclaimer
+#### Disclaimer
 *Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboards are original work, adapted for portfolio demonstration purposes.*  
  
 
