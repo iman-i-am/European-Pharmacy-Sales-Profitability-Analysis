@@ -61,7 +61,7 @@ This project explores European pharmacy sales data using **SQL for data preparat
 
 **ERD (Entity Relationship Diagram)**
 
-![Diagram](pharmacy_erd.pdf)
+![Diagram](pharmacy_erd.png)
 
 
 
