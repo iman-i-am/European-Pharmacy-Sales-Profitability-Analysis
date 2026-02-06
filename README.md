@@ -59,7 +59,11 @@ This project explores European pharmacy sales data using **SQL for data preparat
 
 ---
 
-**Schema**
+**ERD (Entity Relationship Diagram)**
+
+[Diagram](pharmacy erd.pdf)
+
+
 
 #### Disclaimer
 *Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboards are original work, adapted for portfolio demonstration purposes.*  
