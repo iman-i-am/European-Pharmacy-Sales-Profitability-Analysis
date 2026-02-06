@@ -21,6 +21,46 @@ This project explores European pharmacy sales data using **SQL for data preparat
 
 ---
 
+**Data**
+
+### **DimDate**
+- `DateKey` – Unique key for each day  
+- `Date` – Calendar date  
+- `Year`, `Quarter`, `MonthNumber`, `MonthName`, `YearMonth` – Time attributes  
+
+### **DimPharmacy**
+- `PharmacyID`, `PharmacyName` – Store identifiers  
+- `Country`, `Region`, `City` – Geographic attributes  
+- `PharmacyType` – Urban/Suburban/Rural classification  
+- `OpenDate` – Store opening date  
+- `StoreSizeBand` – Size category (S/M/L)  
+- `Latitude`, `Longitude` – Map coordinates  
+
+### **DimProduct**
+- `ProductID`, `ProductName` – Product identifiers  
+- `Category` – Prescription/OTC grouping  
+- `Brand` – Brand family  
+- `IsGeneric` – Generic flag  
+- `PackSize` – Package format  
+- `ListPriceEUR`, `StandardCostEUR` – Base price and cost  
+- `LaunchDate` – Product availability date  
+- `IsDiscontinued`, `DiscontinuedDate` – Discontinuation details  
+
+### **FactSales**
+- `SalesID` – Unique sales record ID  
+- `DateKey` – Link to DimDate  
+- `PharmacyID` – Link to DimPharmacy  
+- `ProductID` – Link to DimProduct  
+- `UnitsSold` – Quantity sold  
+- `RevenueEUR` – Total revenue  
+- `CostEUR` – Total cost  
+- `MarginEUR` – Profit (Revenue − Cost)  
+- `PromoFlag` – Whether sold under promotion  
+
+---
+
+**Schema**
+
 ## 🔹 Disclaimer
 *Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboards are original work, adapted for portfolio demonstration purposes.*  
  
