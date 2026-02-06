@@ -1,10 +1,5 @@
-# European-Pharmacy-Sales-Profitability-Analysis
+# European Pharmacy Sales Profitability Analysis
 
----
-
-**European Pharmacy Sales & Profitability Dashboard (SQL + Power BI)**  
-
----
 
 **Overview**  
 This project explores European pharmacy sales data using **SQL for data preparation and querying** and **Power BI for interactive visualization**. The analysis focuses on uncovering sales drivers, profitability patterns, and promotional impacts across different pharmacy types, product categories, and brands.  
