@@ -89,17 +89,30 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 
 | Tool | Role |
 |---|---|
-| **SQL Server** | Schema setup, star schema joins, KPI calculations, segmentation queries |
+| **SQL Server** | Data modelling, star schema design, EDA queries across 6 scripts |
 | **Power BI** | Power Query transformation, DAX measures, interactive dashboard |
-| **Excel** | Source data format — imported into SQL Server and Power BI directly |
 
 **Workflow:**
-1. Schema design and table creation in SQL Server (`01_schema_setup.sql`)
-2. Data import via SSMS Import Wizard (Excel → SQL Server)
-3. KPI and segmentation queries across 5 script files
-4. Power BI transformation in Power Query — no external dependencies
-5. DAX measure for Gross Margin % applied across all visuals
-6. Dashboard design with slicers for year, country, pharmacy type, and category
+1. **Data Modelling** — designed star schema, created tables, constraints, and indexes in SQL Server (`01_schema_setup.sql`)
+2. **SQL EDA** — interrogated data across 4 dimensions (KPIs, geography, product, promotions) before dashboard build (`02–06`)
+3. **Dashboard Build** — connected Power BI to validated findings, applied Power Query transformations and a DAX measure for Gross Margin %
+4. **Interactivity** — year slicer added to allow 2024 vs 2025 performance comparison
+
+---
+
+
+## 🗄️ SQL Scripts
+
+All scripts are written for **SQL Server** and located in the `sql/` folder. Run them in order after completing schema setup.
+
+| Script | Purpose |
+|---|---|
+| [`01_schema_setup.sql`](sql/01_schema_setup.sql) | Database creation, table definitions, constraints, indexes |
+| [`02_kpi_queries.sql`](sql/02_kpi_queries.sql) | Overall KPIs, YoY growth, quarterly and monthly trends |
+| [`03_geo_analysis.sql`](sql/03_geo_analysis.sql) | Revenue by country, pharmacy type, top/bottom pharmacies |
+| [`04_product_analysis.sql`](sql/04_product_analysis.sql) | Category margins, branded vs generic, high-vol/low-margin products |
+| [`05_promo_analysis.sql`](sql/05_promo_analysis.sql) | Promo margin penalty, reliance by country and pharmacy type |
+| [`06_data_quality.sql`](sql/06_data_quality.sql) | Null checks, duplicates, orphaned keys, date coverage validation |
 
 ---
 
