@@ -4,6 +4,7 @@
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 ![Domain](https://img.shields.io/badge/Domain-Retail_Pharma-blue?style=for-the-badge)
+[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMjdlODA2ZDgtOGI4NC00YWJhLWJkNmItMjgyZDEyOTYyMWRkIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 
 ---
 
