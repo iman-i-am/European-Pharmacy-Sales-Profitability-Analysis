@@ -211,9 +211,11 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 ### Seasonality
 
-- **Peak months:** July–August and May (consistent across both years)
-- **Trough month:** February (lowest revenue both years)
+- **Peak month:** May 2025 — highest revenue at €392,674, followed by July 2024 at €388,334
+- **Trough month:** February 2024 — lowest revenue at €327,319
 - **Margin stability:** All 24 months fall within a 27.7%–28.5% range — demand fluctuates but pricing discipline holds
+- **ASP range:** €18.19 (December 2025) to €20.19 (October 2025)
+- **Notable pattern:** December 2025 recorded the highest gross margin % (28.5%) but the lowest ASP (€18.19) — the business sold more lower-priced units at better margins, suggesting a volume-driven month rather than a high-ticket one
 
 ---
 
