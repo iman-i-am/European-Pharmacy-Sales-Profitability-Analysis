@@ -1,10 +1,11 @@
 # 💊 European Pharmacy Sales & Profitability Analytics
 
+[![🔗 Live Dashboard — Click to View](https://img.shields.io/badge/🔗_Live_Dashboard-Click_to_View-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMjdlODA2ZDgtOGI4NC00YWJhLWJkNmItMjgyZDEyOTYyMWRkIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
 ![Domain](https://img.shields.io/badge/Domain-Retail_Pharma-blue?style=for-the-badge)
-[![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMjdlODA2ZDgtOGI4NC00YWJhLWJkNmItMjgyZDEyOTYyMWRkIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
+
+> 👆 The Live Dashboard badge above is clickable — opens the published Power BI report directly in your browser, no login required.
 
 ---
 
