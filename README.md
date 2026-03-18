@@ -231,18 +231,7 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 
 ---
 
-## ⚠️ Disclaimer
-
-Dataset sourced from the OnyxData & ZoomCharts January–February Analytics Challenge. All SQL queries, Power BI transformations, DAX measures, dashboard design, and analytical insights are original work produced independently for portfolio purposes.
-
-**ERD (Entity Relationship Diagram)**
-
-![Diagram](pharmacy_erd.png)
-
-
 
 #### Disclaimer
 *Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboards are original work, adapted for portfolio demonstration purposes.*  
  
-
-Would you like me to now **draft the full README structure** (sections like *Introduction, Methodology, SQL Queries, Dashboard Screenshots, Insights, How to Run*) so you can drop it straight into GitHub?
