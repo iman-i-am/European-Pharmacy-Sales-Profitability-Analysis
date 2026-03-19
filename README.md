@@ -1,4 +1,4 @@
-# 💊 European Pharmacy Sales & Profitability Analytics
+# European Pharmacy Sales & Profitability Analytics
 
 [![🔗 Live Dashboard — Click to View](https://img.shields.io/badge/🔗_Live_Dashboard-Click_to_View-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://app.powerbi.com/view?r=eyJrIjoiMjdlODA2ZDgtOGI4NC00YWJhLWJkNmItMjgyZDEyOTYyMWRkIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)
 ![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
@@ -9,7 +9,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 A European pharmacy distributor operates across **8 countries** and **120 pharmacies** — Urban, Suburban, and Rural — managing over **62,000 transactions** across two full years (2024–2025). With multiple product categories, a mix of branded and generic products, and an active promotions programme, the company needed a structured analytical view of what actually drives revenue and where margins are being compressed.
 
@@ -19,7 +19,7 @@ This project delivers that view end-to-end:
 
 ---
 
-## 🎯 Business Problem
+## Business Problem
 
 Three core questions drive this analysis:
 
@@ -29,7 +29,7 @@ Three core questions drive this analysis:
 
 ---
 
-## 🗂️ Repository Structure
+## Repository Structure
 ```
 pharmacy-sales-analytics/
 │
@@ -61,7 +61,7 @@ pharmacy-sales-analytics/
 
 ---
 
-## 🗃️ Dataset
+## Dataset
 
 **Source:** OnyxData & ZoomCharts January–February Analytics Challenge
 
@@ -90,7 +90,7 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 
 ---
 
-## 🛠️ Tools & Methodology
+## Tools & Methodology
 
 | Tool | Role |
 |---|---|
@@ -105,7 +105,7 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 
 ---
 
-## 🗄️ SQL Scripts
+## SQL Scripts
 
 All scripts are written for **SQL Server** and located in the `sql/` folder. Run them in order after completing schema setup.
 
@@ -194,7 +194,7 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 ---
 
-### Promotional Impact ⚠️
+### Promotional Impact 
 
 | Sales Type | Revenue | Share | Units | Gross Margin % |
 |---|---|---|---|---|
@@ -227,13 +227,13 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 ---
 
-## 📑 Stakeholder Presentation
+## Stakeholder Presentation
 
 A PowerPoint deck is included in the `presentation/` folder for communicating findings to non-technical audiences. It translates the key findings and recommendations into plain business language — designed for finance, operations, and commercial stakeholders who need the insight without the technical detail.
 
 ---
 
-## 💡 Business Recommendations
+## Business Recommendations
 
 | # | Recommendation | Expected Impact |
 |---|---|---|
@@ -245,13 +245,13 @@ A PowerPoint deck is included in the `presentation/` folder for communicating fi
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### SQL Server
 
 1. Open SQL Server Management Studio (SSMS) and connect to your instance
 2. Run `sql/01_schema_setup.sql` to create the database and tables
-3. Import data: right-click `PharmacyAnalytics` → Tasks → Import Data → select `pharma_data.xlsx` → map each sheet to its matching table name
+3. Import data: right-click `PharmacyAnalysis` → Tasks → Import Data → select `pharma_data.xlsx` → map each sheet to its matching table name
 4. Run scripts `02` through `06` in order — each is self-contained with comments explaining the business question it answers
 
 ### Power BI Dashboard
@@ -265,6 +265,6 @@ Or to explore locally:
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 *Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboard are original work, adapted for portfolio demonstration purposes.*
