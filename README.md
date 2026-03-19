@@ -5,7 +5,7 @@
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![Domain](https://img.shields.io/badge/Domain-Retail_Pharma-blue?style=for-the-badge)
 
-> 👆 The Live Dashboard badge above is clickable — opens the published Power BI report directly in your browser, no login required.
+> 👆 The Live Dashboard badge is clickable — opens the published Power BI report directly in your browser, no login required.
 
 ---
 
@@ -14,8 +14,8 @@
 A European pharmacy distributor operates across **8 countries** and **120 pharmacies** — Urban, Suburban, and Rural — managing over **62,000 transactions** across two full years (2024–2025). With multiple product categories, a mix of branded and generic products, and an active promotions programme, the company needed a structured analytical view of what actually drives revenue and where margins are being compressed.
 
 This project delivers that view end-to-end:
-- **SQL Server** to model the star schema, explore the data, and answer targeted business questions
-- **Power BI** to build an interactive dashboard stakeholders can use to slice performance by country, product, pharmacy type, and promotion status
+- **SQL Server** to model the star schema and conduct exploratory data analysis across 6 scripts
+- **Power BI** to build an interactive dashboard stakeholders can use to compare 2024 vs 2025 performance
 
 ---
 
@@ -30,7 +30,6 @@ Three core questions drive this analysis:
 ---
 
 ## 🗂️ Repository Structure
-
 ```
 pharmacy-sales-analytics/
 │
@@ -42,11 +41,17 @@ pharmacy-sales-analytics/
 │   ├── 02_kpi_queries.sql            # Revenue, margin, YoY growth, seasonality
 │   ├── 03_geo_analysis.sql           # Country, pharmacy type, regional breakdowns
 │   ├── 04_product_analysis.sql       # Category, brand, generic, high-vol/low-margin
-│   └── 05_promo_analysis.sql         # Promotional impact and margin penalty analysis
+│   ├── 05_promo_analysis.sql         # Promotional impact and margin penalty analysis
+│   └── 06_data_quality.sql           # Null checks, duplicates, orphaned keys
 │
 ├── dashboard/
 │   ├── pharmacy_dashboard.pbix       # Power BI dashboard file
-│   └── screenshots/                  # Dashboard page screenshots
+│   └── screenshots/
+│       ├── pharmacy_overview.png     # KPI overview page
+│       └── pharmacy_performance.png  # Performance breakdown page
+│
+├── presentation/
+│   └── pharmacy_analytics.pptx      # Stakeholder presentation deck
 │
 ├── assets/
 │   └── pharmacy_erd.png              # Entity Relationship Diagram
@@ -94,12 +99,11 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 
 **Workflow:**
 1. **Data Modelling** — designed star schema, created tables, constraints, and indexes in SQL Server (`01_schema_setup.sql`)
-2. **SQL EDA** — interrogated data across 4 dimensions (KPIs, geography, product, promotions) before dashboard build (`02–06`)
+2. **SQL EDA** — interrogated data across 4 dimensions (KPIs, geography, product, promotions) and validated data quality before dashboard build (`02–06`)
 3. **Dashboard Build** — connected Power BI to validated findings, applied Power Query transformations and a DAX measure for Gross Margin %
 4. **Interactivity** — year slicer added to allow 2024 vs 2025 performance comparison
 
 ---
-
 
 ## 🗄️ SQL Scripts
 
@@ -128,6 +132,8 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 | YoY Revenue Growth | +4.4% | €4.22M (2024) → €4.41M (2025) |
 | Margin Stability | 28.0% → 28.1% | Consistent across both years |
 
+![Dashboard Overview](dashboard/screenshots/pharmacy_overview.png)
+
 > **Insight:** The business is growing steadily (+4.4% YoY) while holding margin flat — a sign of disciplined pricing rather than growth at the expense of profitability.
 
 ---
@@ -144,6 +150,8 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 | Spain | €735,600 | 8.5% | 27.8% |
 | Poland | €714,236 | 8.3% | 28.1% |
 | Austria | €683,281 | 7.9% | **28.2%** |
+
+![Performance Breakdown](dashboard/screenshots/pharmacy_performance.png)
 
 > **Insight:** Germany, France, and Italy account for **49.9% of total revenue**. Belgium has the highest gross margin % (28.2%) despite ranking 4th in revenue — indicating strong unit economics relative to scale.
 
@@ -171,7 +179,7 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 | Personal Care | €1,454,603 | 16.8% | ⭐ 33.5% |
 | Medical Devices | €872,572 | 10.1% | 25.0% |
 
-> **Insight:** Prescription is the top revenue category (32.4%) but the lowest-margin (21.9%) — nearly **12 percentage points below Wellness and Personal Care**. Growing the two high-margin categories would have an outsized effect on blended profitability. Every 1% revenue shifted from Prescription to Wellness adds approximately €11,500 to annual margin.
+> **Insight:** Prescription is the top revenue category (32.4%) but the lowest-margin (21.9%) — nearly **12 percentage points below Wellness and Personal Care**. Every 1% revenue shifted from Prescription to Wellness adds approximately €11,500 to annual margin.
 
 ---
 
@@ -193,7 +201,7 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 | Non-Promotional | €7,722,676 | 89.4% | 393,608 | **29.0%** |
 | Promotional | €911,301 | 10.6% | 52,185 | **19.9%** |
 
-> **Critical Insight:** Promotions represent 10.6% of revenue but carry only a **19.9% gross margin** vs 29.0% for non-promotional sales — a **9.1 percentage point margin penalty**. Every promoted euro of revenue costs the business approximately 9 cents in margin compared to standard pricing. Promotions should be targeted to high-volume, end-of-life stock clearing — not used as a broad demand driver.
+> **Critical Insight:** Promotions represent 10.6% of revenue but carry only a **19.9% gross margin** vs 29.0% for non-promotional sales — a **9.1 percentage point margin penalty**. Promotions should be targeted to end-of-life stock clearing — not used as a broad demand driver.
 
 ---
 
@@ -219,6 +227,12 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 ---
 
+## 📑 Stakeholder Presentation
+
+A PowerPoint deck is included in the `presentation/` folder for communicating findings to non-technical audiences. It translates the key findings and recommendations into plain business language — designed for finance, operations, and commercial stakeholders who need the insight without the technical detail.
+
+---
+
 ## 💡 Business Recommendations
 
 | # | Recommendation | Expected Impact |
@@ -237,18 +251,20 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 1. Open SQL Server Management Studio (SSMS) and connect to your instance
 2. Run `sql/01_schema_setup.sql` to create the database and tables
-3. Import data: right-click `PharmacyAnalytics` → Tasks → Import Data → select `pharma_data.xlsx` → map each sheet to its table
-4. Run scripts `02` through `05` in order — each is self-contained with comments explaining the business question it answers
+3. Import data: right-click `PharmacyAnalytics` → Tasks → Import Data → select `pharma_data.xlsx` → map each sheet to its matching table name
+4. Run scripts `02` through `06` in order — each is self-contained with comments explaining the business question it answers
 
 ### Power BI Dashboard
 
+🔗 **[View Live Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMjdlODA2ZDgtOGI4NC00YWJhLWJkNmItMjgyZDEyOTYyMWRkIiwidCI6IjQ2NTRiNmYxLTBlNDctNDU3OS1hOGExLTAyZmU5ZDk0M2M3YiIsImMiOjl9)** — no login required
+
+Or to explore locally:
 1. Open `dashboard/pharmacy_dashboard.pbix` in Power BI Desktop
 2. If prompted, update the data source path to your local copy of `pharma_data.xlsx`
 3. All transformations are in Power Query — no external dependencies required
 
 ---
 
+## ⚠️ Disclaimer
 
-#### Disclaimer
-*Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboards are original work, adapted for portfolio demonstration purposes.*  
- 
+*Dataset sourced from the OnyxData & ZoomCharts Jan–Feb Challenge. Analysis, SQL queries, and Power BI dashboard are original work, adapted for portfolio demonstration purposes.*
