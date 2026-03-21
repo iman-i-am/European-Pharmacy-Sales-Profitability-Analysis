@@ -100,7 +100,7 @@ The dataset follows a **star schema** — one fact table joined to three dimensi
 **Workflow:**
 1. **Data Modelling** — designed star schema, created tables, constraints, and indexes in SQL Server (`01_schema_setup.sql`)
 2. **SQL EDA** — interrogated data across 4 dimensions (KPIs, geography, product, promotions) and validated data quality before dashboard build (`02–06`)
-3. **Dashboard Build** — connected Power BI to validated findings, applied Power Query transformations and a DAX measure for Gross Margin %
+3. **Dashboard Build** — connected Power BI to validated findings, applied Power Query transformations Android DAX measures.
 4. **Interactivity** — year slicer added to allow 2024 vs 2025 performance comparison
 
 ---
@@ -120,7 +120,7 @@ All scripts are written for **SQL Server** and located in the `sql/` folder. Run
 
 ---
 
-## 📊 Key Findings
+## Key Findings
 
 ### Overall Network Performance
 
